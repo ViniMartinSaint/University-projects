@@ -1,19 +1,12 @@
-# Exigências:
-# 1. Entre com o valor unitário do produto (Lembrar que número decimal é feito com ponto e não vírgula);
-# 2. Entre com a quantidade desse produto;
-# 3. O programa deve retornar o valor total sem desconto;
-# 4. O programa deve retornar o valor total após o desconto
-# 5. Deve-se utilizar estruturas if, elif e else (EXIGÊNCIA 1 de 1);
-# 6. Colocar um exemplo de SAIDA DE CONSOLE de compra de mais de 10 und. (para mostrar que o desconto foi aplicado)
 
 # Mensagem de boas vindas
 print("Bem-vindo a Loja do Vinícius Martins dos Santos, O melhor atacado de Belford Roxo!") 
 
-# Construção lógica do programa / Solicitação do programa
+# Valores preenchidos pelo usuário do código / Preço do produto e quantidade dele
 valor_produto = float(input("Digite o valor do produto: "))
 qtd_produto = int(input("Digite a quantidade do produto: "))
 
-
+# Condicionais baseadas na quantidades dos produtos
 if (qtd_produto <= 9):
     desconto = 0
      
@@ -27,6 +20,7 @@ else:
     desconto = 0.15
     desconto_formatado = "15%"
 
+# Formula final do cálculo da compra, seja com desconto ou sem
 total_sem_desconto = valor_produto * qtd_produto
 total_com_desconto = total_sem_desconto - (total_sem_desconto * desconto)
 
